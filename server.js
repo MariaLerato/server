@@ -6,6 +6,7 @@ import hotels from './routes/hotelRoutes.js'
 import hotelguests from "./routes/hotelGuests.route.js"
 import hotelroom from './routes/hotelRooms.route.js'
 import dotenv from 'dotenv'
+
 dotenv.config()
 const app = express()
 
