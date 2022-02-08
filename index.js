@@ -4,10 +4,10 @@ import dotenv from 'dotenv'
 import HotelDAO from './Dao/hotelsDao.js'
 import HotelGuestDAO from './Dao/hotelGuests.dao.js'
 import HotelRoomDAO from './Dao/hotelRoom.dao.js'
+
 const Mongo = mongodb.MongoClient
 dotenv.config()
 
-const port = process.env.PORT || 3000
 Mongo.connect(
     process.env.Connect ,{
      maxPoolSize:50,
@@ -22,10 +22,8 @@ Mongo.connect(
     await HotelDAO.injectDB(client)
     await HotelGuestDAO.injectDB(client)
     await HotelRoomDAO.injectDB(client)
-    app.listen(port,()=>{
-        console.log(`Connected to port ${port}`)
-    }
-    )
+   
+    
 })
 
 
