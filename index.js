@@ -4,9 +4,8 @@ import dotenv from 'dotenv'
 import HotelDAO from './Dao/hotelsDao.js'
 import HotelGuestDAO from './Dao/hotelGuests.dao.js'
 import HotelRoomDAO from './Dao/hotelRoom.dao.js'
+
 const Mongo = mongodb.MongoClient
-
-
 
 Mongo.connect(
     process.env.Connect ,{
